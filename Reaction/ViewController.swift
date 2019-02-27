@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    lazy var reaction = Reaction(withTargat: self)
+    lazy var reaction = ReactionController(withTargat: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
 }
 
 
-extension ViewController: ReactionDelegate {
+extension ViewController: ReactionControllerDelegate {
     func happyButtonTapped(_ sender: UIButton) {
         print("happyButtonTapped")
 //        reaction.dismissAlertController()

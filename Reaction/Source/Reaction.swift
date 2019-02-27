@@ -9,7 +9,7 @@
 import UIKit
 
 
-protocol ReactionDelegate: AnyObject {
+protocol ReactionControllerDelegate: AnyObject {
     func happyButtonTapped(_ sender: UIButton)
     func angryButtonTapped(_ sender: UIButton)
     func loveButtonTapped(_ sender: UIButton)
@@ -17,7 +17,7 @@ protocol ReactionDelegate: AnyObject {
     func wowButtonTapped(_ sender: UIButton)
 }
 
-class Reaction: NSObject {
+class ReactionController: NSObject {
     lazy var reactionView: ReactionView = {
         let view = ReactionView(frame: .zero)
         view.delegate = self
@@ -29,7 +29,7 @@ class Reaction: NSObject {
         
     }
     
-    weak var delegate: ReactionDelegate?
+    weak var delegate: ReactionControllerDelegate?
     weak var viewController: UIViewController?
     
     convenience init(withTargat vc: UIViewController) {
@@ -78,7 +78,7 @@ class Reaction: NSObject {
 
 
 // MARK: - Add Target
-extension Reaction: ReactionViewDelegate {
+extension ReactionController: ReactionViewDelegate {
     @objc func dismissAlertController(){
         viewController?.dismiss(animated: true, completion: nil)
     }
@@ -138,7 +138,7 @@ extension Reaction: ReactionViewDelegate {
 //}
 
 
-extension Reaction {
+extension ReactionController {
     func searchVisualEffectsSubview(atView view: UIView) -> UIVisualEffectView? {
         if let visualEffectView = view as? UIVisualEffectView {
             return visualEffectView
