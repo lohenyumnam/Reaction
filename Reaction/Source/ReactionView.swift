@@ -23,18 +23,16 @@ class ReactionView: UIView {
         stackView.alignment = .center
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.spacing = 5
-        stackView.distribution = .fillProportionally
+        stackView.distribution = .fill
         return stackView
     }()
-    let happyButton : UIButton = {
-        let button = UIButton(type: UIButton.ButtonType.system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        let buttonImage = UIImage(named: "happy")
-        button.setImage(buttonImage, for: UIControl.State.normal)
-        button.tintColor = UIColor.white
-        button.addTarget(self, action: #selector(happyButtonTapped(_:)), for: UIControl.Event.touchUpInside)
-        button.isHidden = false
-        return button
+    let happyImage: UIImageView = {
+        let image = UIImage(named: "happy")
+        let imageView = UIImageView(image: image)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        imageView.isUserInteractionEnabled = true
+        return imageView
     }()
     let happyLabel: UILabel = {
         let label = UILabel()
@@ -43,7 +41,6 @@ class ReactionView: UIView {
         label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.regular)
         label.textAlignment = .center
-        label.setContentHuggingPriority(UILayoutPriority.defaultHigh, for: .vertical)
         return label
     }()
     
@@ -53,18 +50,16 @@ class ReactionView: UIView {
         stackView.alignment = .center
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.spacing = 5
-        stackView.distribution = .fillProportionally
+        stackView.distribution = .fill
         return stackView
     }()
-    let angryButton : UIButton = {
-        let button = UIButton(type: UIButton.ButtonType.system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        let buttonImage = UIImage(named: "angry")
-        button.setImage(buttonImage, for: UIControl.State.normal)
-        button.tintColor = UIColor.white
-        button.addTarget(self, action: #selector(angryButtonTapped(_:)), for: UIControl.Event.touchUpInside)
-        button.isHidden = false
-        return button
+    let angryImage: UIImageView = {
+        let image = UIImage(named: "angry")
+        let imageView = UIImageView(image: image)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        imageView.isUserInteractionEnabled = true
+        return imageView
     }()
     let angryLabel: UILabel = {
         let label = UILabel()
@@ -73,7 +68,6 @@ class ReactionView: UIView {
         label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.regular)
         label.textAlignment = .center
-        label.setContentHuggingPriority(UILayoutPriority.defaultHigh, for: .vertical)
         return label
     }()
     
@@ -83,18 +77,16 @@ class ReactionView: UIView {
         stackView.alignment = .center
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.spacing = 5
-        stackView.distribution = .fillProportionally
+        stackView.distribution = .fill
         return stackView
     }()
-    let loveButton : UIButton = {
-        let button = UIButton(type: UIButton.ButtonType.system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        let buttonImage = UIImage(named: "love")
-        button.setImage(buttonImage, for: UIControl.State.normal)
-        button.tintColor = UIColor.white
-        button.addTarget(self, action: #selector(loveButtonTapped(_:)), for: UIControl.Event.touchUpInside)
-        button.isHidden = false
-        return button
+    let loveImage: UIImageView = {
+        let image = UIImage(named: "love")
+        let imageView = UIImageView(image: image)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        imageView.isUserInteractionEnabled = true
+        return imageView
     }()
     let loveLabel: UILabel = {
         let label = UILabel()
@@ -103,7 +95,6 @@ class ReactionView: UIView {
         label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.regular)
         label.textAlignment = .center
-        label.setContentHuggingPriority(UILayoutPriority.defaultHigh, for: .vertical)
         return label
     }()
     
@@ -113,18 +104,16 @@ class ReactionView: UIView {
         stackView.alignment = .center
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.spacing = 5
-        stackView.distribution = .fillProportionally
+        stackView.distribution = .fill
         return stackView
     }()
-    let sadButton : UIButton = {
-        let button = UIButton(type: UIButton.ButtonType.system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        let buttonImage = UIImage(named: "sad")
-        button.setImage(buttonImage, for: UIControl.State.normal)
-        button.tintColor = UIColor.white
-        button.addTarget(self, action: #selector(sadButtonTapped(_:)), for: UIControl.Event.touchUpInside)
-        button.isHidden = false
-        return button
+    let sadImage: UIImageView = {
+        let image = UIImage(named: "sad")
+        let imageView = UIImageView(image: image)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        imageView.isUserInteractionEnabled = true
+        return imageView
     }()
     let sadLabel: UILabel = {
         let label = UILabel()
@@ -133,7 +122,6 @@ class ReactionView: UIView {
         label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.regular)
         label.textAlignment = .center
-        label.setContentHuggingPriority(UILayoutPriority.defaultHigh, for: .vertical)
         return label
     }()
     
@@ -143,18 +131,16 @@ class ReactionView: UIView {
         stackView.alignment = .center
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.spacing = 5
-        stackView.distribution = .fillProportionally
+        stackView.distribution = .fill
         return stackView
     }()
-    let wowButton : UIButton = {
-        let button = UIButton(type: UIButton.ButtonType.system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        let buttonImage = UIImage(named: "wow")
-        button.setImage(buttonImage, for: UIControl.State.normal)
-        button.tintColor = UIColor.white
-        button.addTarget(self, action: #selector(wowButtonTapped(_:)), for: UIControl.Event.touchUpInside)
-        button.isHidden = false
-        return button
+    let wowImage: UIImageView = {
+        let image = UIImage(named: "wow")
+        let imageView = UIImageView(image: image)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        imageView.isUserInteractionEnabled = true
+        return imageView
     }()
     let wowLabel: UILabel = {
         let label = UILabel()
@@ -163,7 +149,6 @@ class ReactionView: UIView {
         label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.regular)
         label.textAlignment = .center
-        label.setContentHuggingPriority(UILayoutPriority.defaultHigh, for: .vertical)
         return label
     }()
     
@@ -176,69 +161,81 @@ class ReactionView: UIView {
         stackView.distribution = .fillEqually
         return stackView
     }()
-
+    
     weak var delegate: ReactionViewDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addUIToView()
         self.configUI()
+        addGestureRecognizerToImageView()
         
         self.translatesAutoresizingMaskIntoConstraints = false
+        
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // This allow Image to tap
+    func addGestureRecognizerToImageView() {
+        self.happyImage.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(self.happyButtonTapped(_:))))
+        self.angryImage.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(self.angryButtonTapped(_:))))
+        self.loveImage.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(self.loveButtonTapped(_:))))
+        self.sadImage.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(self.sadButtonTapped(_:))))
+        self.wowImage.addGestureRecognizer( UITapGestureRecognizer(target: self, action: #selector(self.wowButtonTapped(_:))))
+    }
+    
     func configUI(){
-        let sizeOfButton: CGFloat = 50
+        let sizeOfImage: CGFloat    = 50
         let views = ["reactionStackView"    : reactionStackView]
         
         NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|[reactionStackView]|", options: [], metrics: nil, views: views))
         NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "V:|[reactionStackView]|", options: [], metrics: nil, views: views))
         
         
-        happyButton.widthAnchor.constraint(equalToConstant: sizeOfButton).isActive = true
-        happyButton.heightAnchor.constraint(equalToConstant: sizeOfButton).isActive = true
+        happyImage.widthAnchor.constraint(equalToConstant: sizeOfImage).isActive = true
+        happyImage.heightAnchor.constraint(equalToConstant: sizeOfImage).isActive = true
         
-        angryButton.widthAnchor.constraint(equalToConstant: sizeOfButton).isActive = true
-        angryButton.heightAnchor.constraint(equalToConstant: sizeOfButton).isActive = true
+        angryImage.widthAnchor.constraint(equalToConstant: sizeOfImage).isActive = true
+        angryImage.heightAnchor.constraint(equalToConstant: sizeOfImage).isActive = true
         
-        loveButton.widthAnchor.constraint(equalToConstant: sizeOfButton).isActive = true
-        loveButton.heightAnchor.constraint(equalToConstant: sizeOfButton).isActive = true
+        loveImage.widthAnchor.constraint(equalToConstant: sizeOfImage).isActive = true
+        loveImage.heightAnchor.constraint(equalToConstant: sizeOfImage).isActive = true
         
-        sadButton.widthAnchor.constraint(equalToConstant: sizeOfButton).isActive = true
-        sadButton.heightAnchor.constraint(equalToConstant: sizeOfButton).isActive = true
+        sadImage.widthAnchor.constraint(equalToConstant: sizeOfImage).isActive = true
+        sadImage.heightAnchor.constraint(equalToConstant: sizeOfImage).isActive = true
         
-        wowButton.widthAnchor.constraint(equalToConstant: sizeOfButton).isActive = true
-        wowButton.heightAnchor.constraint(equalToConstant: sizeOfButton).isActive = true
+        wowImage.widthAnchor.constraint(equalToConstant: sizeOfImage).isActive = true
+        wowImage.heightAnchor.constraint(equalToConstant: sizeOfImage).isActive = true
         
         
-        happyButton.backgroundColor = .red
-        angryButton.backgroundColor = .red
-        loveButton.backgroundColor = .red
-        sadButton.backgroundColor = .red
-        wowButton.backgroundColor = .red
+        happyImage.backgroundColor = .red
+        angryImage.backgroundColor = .red
+        loveImage.backgroundColor = .red
+        sadImage.backgroundColor = .red
+        wowImage.backgroundColor = .red
         
     }
     
     func addUIToView(){
         addSubview(reactionStackView)
         
-        happyStackView.addArrangedSubview(happyButton)
+        happyStackView.addArrangedSubview(happyImage)
         happyStackView.addArrangedSubview(happyLabel)
         
-        angryStackView.addArrangedSubview(angryButton)
+        angryStackView.addArrangedSubview(angryImage)
         angryStackView.addArrangedSubview(angryLabel)
         
-        loveStackView.addArrangedSubview(loveButton)
+        loveStackView.addArrangedSubview(loveImage)
         loveStackView.addArrangedSubview(loveLabel)
         
-        sadStackView.addArrangedSubview(sadButton)
+        sadStackView.addArrangedSubview(sadImage)
         sadStackView.addArrangedSubview(sadLabel)
         
-        wowStackView.addArrangedSubview(wowButton)
+        wowStackView.addArrangedSubview(wowImage)
         wowStackView.addArrangedSubview(wowLabel)
         
         reactionStackView.addArrangedSubview(happyStackView)
@@ -272,3 +269,5 @@ extension ReactionView {
     }
     
 }
+
+
