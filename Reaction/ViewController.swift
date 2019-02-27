@@ -9,12 +9,50 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    lazy var reaction = Reaction(withTargat: self)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        reaction.delegate = self
     }
-
-
+    
+    @IBAction func open(_ sender: UIButton) {
+        reaction.showPickerController()
+    }
+    
 }
+
+
+extension ViewController: ReactionDelegate {
+    func happyButtonTapped(_ sender: UIButton) {
+        print("happyButtonTapped")
+//        reaction.dismissAlertController()
+        let view = UIViewController()
+        view.view.backgroundColor = .red
+        present(view, animated: true, completion: nil)
+    }
+    
+    func angryButtonTapped(_ sender: UIButton) {
+         print("angryButtonTapped")
+    }
+    
+    func loveButtonTapped(_ sender: UIButton) {
+         print("loveButtonTapped")
+    }
+    
+    func sadButtonTapped(_ sender: UIButton) {
+         print("sadButtonTapped")
+    }
+    
+    func wowButtonTapped(_ sender: UIButton) {
+         print("wowButtonTapped")
+    }
+    
+    
+}
+
+
+
+
 
